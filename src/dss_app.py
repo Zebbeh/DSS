@@ -14,7 +14,7 @@ df = pd.read_csv(data)
 # Transform the gender field to 0 or 1 instad of a string
 label_encoder = LabelEncoder()
 df['Gender'] = label_encoder.fit_transform(df['Gender'])
-print(df['Gender'])
+
 
 # Take the values from the csv and train the model with pipeline
 X = df[['Gender', 'Age', 'Screen On Time (hours/day)', 'Number of Apps Installed']]
